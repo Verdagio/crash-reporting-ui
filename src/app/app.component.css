@@ -1,0 +1,46 @@
+html{
+  background-color: #2A2F35;
+}
+
+.content-area{
+  padding: 5px;
+  background-color: #2A2F35;
+  color: azure;
+  height: 100%;
+}
+
+.context-container{
+  padding: 5px;
+  background-color: #394451;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.context-head {
+  background-color: #151A20;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.context-body {
+  padding: 10px;
+  background-color: #293340;
+  border-radius: 5px;
+}
+
+.list-group-item {
+  background-color: #43556A;
+  color: azure;
+}
+
+a {
+  color: azure;
+  cursor: pointer;
+
+}
+
+a:hover{
+  color: rgb(92, 255, 255);
+}

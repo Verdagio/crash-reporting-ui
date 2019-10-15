@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-5">
+    <app-crash-item-list [bucketType]="bucketType"></app-crash-item-list>
+  </div>
+  <div class="col-xs-7">
+    <app-crash-item-details
+    *ngIf="selectedCrashItem; else infoText"
+    [crashItem]="selectedCrashItem"></app-crash-item-details>
+    <ng-template #infoText>
+      <p>Please select a crash item</p>
+    </ng-template>
+
+  </div>
+
+</div>

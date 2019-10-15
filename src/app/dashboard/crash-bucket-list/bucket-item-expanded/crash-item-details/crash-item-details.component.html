@@ -1,0 +1,39 @@
+<div class="context-container">
+  <div class="context-head">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>ID: {{crashItem.crashId}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="context-body">
+        <h4>
+          Application name:
+          <span class="label label-info">{{crashItem.appName}}</span>
+        </h4>
+        <h4>
+          Operating System:
+          <span class="label label-primary">
+            {{crashItem.operatingSystem}}
+          </span>
+        </h4>
+        <p>Time of crash: {{crashItem.timeOfCrash | date: 'long' }}</p>
+        <hr>
+        <h4>Error text:</h4>
+        <div class="scrollBox">
+          <p style="white-space: pre">
+            Time: {{crashItem.timeOfCrash}}
+            <br>
+            {{crashItem.crashText}}
+          </p>
+        </div>
+        <hr>
+        <button class="btn btn-danger btn-block" (click)="onDelete()">
+          Delete Crash Item
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

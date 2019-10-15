@@ -1,0 +1,26 @@
+<div class="context-container">
+  <div class="context-head">
+    <div class="row">
+      <div class="col-xs-6">
+          <h3>Crash Items</h3>
+      </div>
+    </div>
+  </div>
+  <div class="context-body">
+      <div class="row">
+          <div class="col-xs-12">
+            <ul
+            class="list-group"
+            *ngFor="let crashItem of crashItems | filter:bucketType; "
+            >
+              <li class="list-group-item">
+                  <app-crash-item
+                  [crashItem]="crashItem"
+                  ></app-crash-item>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </div>
+</div>
+
