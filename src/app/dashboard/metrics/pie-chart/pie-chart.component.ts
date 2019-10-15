@@ -42,7 +42,6 @@ export class PieChartComponent implements OnInit {
     },
     options: {
         responsive: true,
-        scaleFontColor: '#ffffff',
         legend: {
           position: 'bottom'
         },
