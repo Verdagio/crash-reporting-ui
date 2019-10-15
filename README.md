@@ -1,5 +1,18 @@
 # CrashBucketingApp
 
+## About
+
+This project is a simple crash reporting tool to allow a user to view and manage crash reports.
+
+## Initial mock up
+![Mockup](https://imgur.com/HWdPrNh.png)
+
+## Actual 
+I had decided that an additional bar chart displaying the same information as a doughnut chart was not useful. Therefore I decided to just use a doughnut chart alone. I may add in another line chart displaying crash frequencies by month (time permitting).
+![Dashboard](https://i.imgur.com/48XGZh4.png)
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
