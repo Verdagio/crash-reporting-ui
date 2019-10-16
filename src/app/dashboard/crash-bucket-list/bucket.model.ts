@@ -1,10 +1,12 @@
+import { CrashItem } from './bucket-item-expanded/crash-item.model';
+
 export class Bucket {
   public name: string;
-  public size: number;
+  public items: CrashItem[];
 
-  constructor(name: string, size?: number){
+  constructor(name: string, items: CrashItem[]){
     this.name = name;
-    this.size = size;
+    this.items = items;
   }
 
 }

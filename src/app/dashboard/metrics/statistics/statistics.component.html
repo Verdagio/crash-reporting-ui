@@ -2,10 +2,17 @@
 <div class="context-body">
 <div class="row">
   <div style="text-align: center" class="col-xs-4">
-    <h3>Total Crashes</h3>
+    <h2>Total Crashes</h2>
     <h1>{{total}}</h1>
   </div>
   <div class="col-xs-8">
+      <div class="row">
+          <div class="col-xs-4"><h4 style="text-align:center">Bucket</h4></div>
+          <div class="col-xs-4"><h4 style="text-align:center">Amount</h4></div>
+          <div class="col-xs-4"><h4 style="text-align:center">%</h4></div>
+        </div>
+
+
     <ul
     style="list-style-type: none;
         margin: 5px;
@@ -16,7 +23,8 @@
        <ng-container>
          <div class="row">
            <div class="col-xs-4"> <p style="text-align:center">{{bucket.name}}</p></div>
-           <div class="col-xs-6"> <p style="text-align: center">{{ 100 * ( bucket.size  / (buckets.length + 1)) | number:'2.1-3'}}%</p></div>
+           <div class="col-xs-4"><p style="text-align:center">{{bucket.items.length}}</p></div>
+           <div class="col-xs-4"> <p style="text-align: center">{{ 100 * ( bucket.items.length  / (total)) | number:'2.1-2'}}%</p></div>
          </div>
          <hr style="margin: 0px;">
        </ng-container>

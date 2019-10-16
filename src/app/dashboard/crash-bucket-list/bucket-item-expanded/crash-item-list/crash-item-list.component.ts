@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { CrashItem } from '../crash-item.model';
 import { CrashItemService } from '../crash-item.service';
+import { DataService } from 'src/app/shared/data.service';
 
 
 
@@ -19,7 +20,7 @@ export class CrashItemListComponent implements OnInit, OnDestroy {
   subscription = new Subscription();
   @Input() bucketType: string;
 
-  constructor(private crashItemService: CrashItemService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private crashItemService: CrashItemService, private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
 

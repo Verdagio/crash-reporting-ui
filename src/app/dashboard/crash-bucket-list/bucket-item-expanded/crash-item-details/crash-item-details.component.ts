@@ -1,7 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { CrashItem } from '../crash-item.model';
 import { CrashItemService } from '../crash-item.service';
+import { DataService } from 'src/app/shared/data.service';
+
+
 
 
 
@@ -13,10 +17,14 @@ import { CrashItemService } from '../crash-item.service';
 export class CrashItemDetailsComponent {
   @Input() crashItem: CrashItem;
 
-  constructor(private crashItemService: CrashItemService) { }
+  constructor(private dataService: DataService, private crashItemService: CrashItemService) { }
+
 
   onDelete(){
-    this.crashItemService.removeCrashItem(this.crashItem);
+    this.dataService.removeCrashItemById(this.crashItem.crashId.substr(0,1), this.crashItem.crashId);
+    let nextItem  = this.crashItemService.nextItem(this.crashItem.crashId);
+    this.crashItem = nextItem.crashId.substr(0,1)  === this.crashItem.crashId.substr(0,1) ? nextItem : null;
+
   }
 
 }

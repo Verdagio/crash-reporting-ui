@@ -1,4 +1,4 @@
-<div class="context-container">
+<div class="context-container" *ngIf="crashItem else infoText">
   <div class="context-head">
     <div class="row">
       <div class="col-xs-12">
@@ -37,3 +37,14 @@
     </div>
   </div>
 </div>
+<ng-template #infoText>
+    <div class="context-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="context-body">
+              <h3 style="text-align: center">Nothing left to show</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+</ng-template>

@@ -11,14 +11,14 @@
           <div class="col-xs-12">
             <ul
             class="list-group"
-            *ngFor="let crashItem of crashItems | filter:bucketType; "
-            >
+            *ngFor="let crashItem of (crashItems | filter:bucketType) | paginate: {itemsPerPage: 6, currentPage: p}">
               <li class="list-group-item">
                   <app-crash-item
                   [crashItem]="crashItem"
                   ></app-crash-item>
               </li>
             </ul>
+            <pagination-controls class="pag-ctrl" (pageChange)="p = $event"></pagination-controls>
           </div>
         </div>
   </div>

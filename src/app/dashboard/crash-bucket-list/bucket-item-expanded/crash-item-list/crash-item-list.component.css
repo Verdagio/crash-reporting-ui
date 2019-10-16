@@ -1,3 +1,21 @@
-.search {
-  background-color: #293340;
+.pag-ctrl /deep/ .ngx-pagination .current {
+  border-radius: 5px;
+  background-color: rgb(76, 110, 150);
+  color: aqua;
 }
+.pag-ctrl /deep/ .ngx-pagination {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #43556A;
+  text-align: center;
+}
+.pag-ctrl /deep/ .ngx-pagination a{
+  color: azure;
+}
+.pag-ctrl /deep/ .ngx-pagination a:hover{
+  color: azure;
+  background-color:  #151A20;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
