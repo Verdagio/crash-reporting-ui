@@ -2,6 +2,9 @@
 
 ## About
 
+## How to
+Run `docker-compose up -build` to run the application on `http://localhost:4200/`
+
 This project is a simple crash reporting tool to allow a user to view and manage crash reports.
 
 ## Initial mock up
